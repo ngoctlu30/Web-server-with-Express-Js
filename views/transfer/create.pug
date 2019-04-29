@@ -1,0 +1,17 @@
+extends ../layouts/layout
+
+block head
+
+	h1 New transfer
+
+	form(method="POST")
+		input(type="hidden", name="_csrf", value=csrfToken)
+
+		.form-group
+			label.ml-5(for="account") Account
+			input#email.form-control.ml-5.w-50(name="accountId", type="text", )
+		.form-group
+			label.ml-5(for="amount") Amount
+			input#name.form-control.ml-5.w-50(name="amount", type="number",)
+
+		button.btn.btn-primary.ml-5 Transfer

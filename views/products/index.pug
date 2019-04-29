@@ -1,0 +1,29 @@
+extends ../layouts/layout
+block head
+
+	h1 Products
+	.container
+		.row.display-flex.justify-content-center
+			each product in products
+				.card.border.border-dark.mb-4.mr-2(style='height: auto; width:16rem')
+					img( class="card-img-top",src=product.image, alt='...')
+					.card-body
+						h5.card-title Card title
+						p.card-text
+							| Some quick example text to build on the card title and make up the bulk of the cards content.
+						a.btn.btn-primary(href='/cart/add/' + product.id) Add to cart
+
+	nav(aria-label='Page navigation example')
+		ul.pagination
+			li.page-item
+				a.page-link(href='#') Previous
+			li.page-item
+				a.page-link(href='#') 1
+			li.page-item
+				a.page-link(href='#') 2
+			li.page-item
+				a.page-link(href='#') 3
+			li.page-item
+				a.page-link(href='/users/products?page=' + 2 ) Next
+			
+	
