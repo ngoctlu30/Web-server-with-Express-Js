@@ -11,14 +11,14 @@ module.exports.postCreate = function(req, res, next) {
 	}
 
 
-	var phoneInputToArray = phoneInput.split('');
-	for(var i = 0 ; i < phoneInputToArray.length ; i++) {
-		if( isNaN(parseInt(phoneInputToArray[i])) ) {
-			errors.push("Phone can't have character!!");
-			break;
-		}
+	// var phoneInputToArray = phoneInput.split('');
+	// for(var i = 0 ; i < phoneInputToArray.length ; i++) {
+	// 	if( isNaN(parseInt(phoneInputToArray[i])) ) {
+	// 		errors.push("Phone can't have character!!");
+	// 		break;
+	// 	}
 
-	}
+	// }
 
 	if(!isNaN(parseInt(nameInput))) {
 		errors.push("Name can not start with number");

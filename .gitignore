@@ -1,3 +1,5 @@
 node_modules
 .env
 db.json
+MONGO_URL=mongodb://localhost/db
+SESSION_SECRET=HELLOWORD

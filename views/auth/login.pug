@@ -7,12 +7,17 @@ block head
 		each error in errors
 			.alert.alert-danger= error
 
-	form( class=" " action="/auth/login",method="POST")
+	form(action="/auth/login",method="POST")
 		.form-group
 			label.ml-5(for="email") email
 			input#email.form-control.ml-5.w-50(name="email", type="text", )
 		.form-group
 			label.ml-5(for="password") Phone
 			input#name.form-control.ml-5.w-50(name="password", type="password",)
-
+		.form-group
+			input.check-box.ml-5(type="checkbox")
 		button.btn.btn-primary.ml-5 Login
+
+	form(action="/auth/sign-in", method="GET")
+		label.ml-5 You dont have account! Click here
+		button.btn.btn-success.ml-2(href="/auth/sign-in") Sign
